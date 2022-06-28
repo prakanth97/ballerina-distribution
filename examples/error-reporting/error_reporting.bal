@@ -1,7 +1,6 @@
 import ballerina/io;
 
-// Parses a `string` value to convert to an `int` value.
-// This function may return error values.
+// Parses a `string` value to convert to an `int` value. This function may return error values.
 // The return type is a union with `error`.
 function parse(string s) returns int|error {
 
@@ -13,7 +12,6 @@ function parse(string s) returns int|error {
             // If `p` is not a digit construct, it returns
             // an `error` value with `not a digit` as the error message.
             return error("not a digit");
-
         }
         n = n * 10 + p;
     }
